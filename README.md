@@ -7,15 +7,15 @@ Interaktywny schemat ideowy samoczynnej płuczki kanalizacyjnej przy syfonie pod
 ## Jak działa
 
 1. Woda czysta powoli napełnia zbiornik Ø800 o długości 18,50 m oraz komorę.
-2. Gdy lustro dojdzie do kolana lewara Ø200, nadmiar tylko się przelewa. Lewar sam nie ruszy.
-3. Osobno napełniany drewniany zbiornik dawkujący przechyla się i zrzuca porcję wody do długiego ramienia lewara. Lewar zasysa, a woda ze zbiornika spływa naraz do syfonu pod rzeką i wymywa z niego osady.
-4. Gdy lustro opadnie do wylotu rurki przerywającej Ø1″, powietrze zrywa słup wody i cykl zaczyna się od nowa.
+2. Pod dzwonem lewara zostaje poduszka powietrza. Gdy lustro dojdzie do krawędzi rury spustowej Ø200, nadmiar tylko się przelewa. Lewar sam nie ruszy.
+3. Osobno napełniany drewniany zbiornik dawkujący przechyla się i zrzuca porcję wody do rury spustowej, a ta porywa powietrze spod dzwonu. Dzwon zasysa, a woda ze zbiornika spływa naraz do syfonu pod rzeką i wymywa z niego osady.
+4. Gdy lustro opadnie do wylotu rurki przerywającej Ø1″, powietrze wpada pod dzwon i zrywa słup wody i cykl zaczyna się od nowa.
 
 ## Co jest z rysunku, a co jest założeniem
 
-Z rysunku z 1959 r. pochodzą: zbiornik Ø800 × 18,50 m, komora o głębokości 285 cm i wymiarach 80 × 100 cm w świetle, właz Ø700, zasyfonowanie Ø200, rurka przerywająca Ø1″, zbiornik drewniany dawkujący oraz dwa osobne doprowadzenia wody czystej.
+Z rysunku z 1959 r. pochodzą: zbiornik Ø800 × 18,50 m, komora o głębokości 285 cm i wymiarach 80 × 100 cm w świetle, właz Ø700, lewar dzwonowy z zasyfonowaniem Ø200, rurka przerywająca Ø1″, zbiornik drewniany dawkujący oraz dwa osobne doprowadzenia wody czystej.
 
-Założeniami są: przechylny ruch zbiornika dawkującego i jego pojemność (ok. 25 l), prowadzenie rur, rzędne kolana, rurki i zamknięcia wodnego, współczynnik strat oraz wydatki dopływów. Te elementy są do sprawdzenia na oryginalnych rysunkach Mairicha.
+Założeniami są: przechylny ruch zbiornika dawkującego i jego pojemność (ok. 25 l), prowadzenie rur pod dnem, rzędne dzwonu, rury spustowej, rurki i zamknięcia wodnego, współczynnik strat oraz wydatki dopływów. Te elementy są do sprawdzenia na oryginalnych rysunkach Mairicha.
 
 ## Pliki
 

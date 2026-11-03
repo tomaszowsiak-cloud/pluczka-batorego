@@ -107,34 +107,39 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
   <path d="M868 500L876 545L862 600L876 655L868 700M902 500L910 545L896 600L910 655L902 700" fill="none" stroke="#e9f1fa" stroke-width="1.6"/>
 </g>
 
-<!-- siphon pipe: wall, bore, water layers -->
+<!-- bell siphon: standpipe, bell, trap -->
+<rect id="wBell" x="342" y="466" width="76" height="0" fill="#6fd3ff" fill-opacity=".45"/>
 <g fill="none" stroke-linejoin="round" stroke-linecap="butt">
-  <path id="pWall" d="M410 664V484H318V818H230V770H30" stroke="#e9f1fa" stroke-width="48"/>
-  <path d="M410 666V484H318V818H230V770H28" stroke="#0f3460" stroke-width="40"/>
-  <path d="M230 790V818H318V790" stroke="#6fd3ff" stroke-opacity=".5" stroke-width="40"/>
-  <line id="wShort" x1="410" y1="664" x2="410" y2="664" stroke="#6fd3ff" stroke-opacity=".5" stroke-width="40"/>
-  <path id="wFull" d="M410 664V484H318V818H230V770H30" stroke="#6fd3ff" stroke-opacity="0" stroke-width="40"/>
-  <path id="wDash" d="M410 664V484H318V818H230V770H30" stroke="#e9f1fa" stroke-opacity="0" stroke-width="4" stroke-dasharray="14 16"/>
-  <path id="wTrickle" d="M300 470V790" stroke="#6fd3ff" stroke-opacity="0" stroke-width="3" stroke-dasharray="6 8"/>
+  <path d="M380 504V818H230V770H30" stroke="#e9f1fa" stroke-width="48"/>
+  <path d="M380 506V818H230V770H28" stroke="#0f3460" stroke-width="40"/>
+  <path d="M230 790V818H380V790" stroke="#6fd3ff" stroke-opacity=".5" stroke-width="40"/>
+  <path id="wFull" d="M380 504V818H230V770H30" stroke="#6fd3ff" stroke-opacity="0" stroke-width="40"/>
+  <path id="wDash" d="M380 476V818H230V770H30" stroke="#e9f1fa" stroke-opacity="0" stroke-width="4" stroke-dasharray="14 16"/>
+  <path id="wTrickle" d="M362 506V790" stroke="#6fd3ff" stroke-opacity="0" stroke-width="3" stroke-dasharray="6 8"/>
   <path id="wOut" d="M210 770H30" stroke="#6fd3ff" stroke-opacity="0" stroke-width="3" stroke-dasharray="6 8"/>
-  <!-- funnel over long leg -->
-  <path d="M300 444L310 460H326L336 444" stroke="#e9f1fa" stroke-width="2"/>
+  <!-- bell -->
+  <path d="M340 664V472Q340 464 348 464H412Q420 464 420 472V664" stroke="#e9f1fa" stroke-width="4"/>
+  <path d="M334 664H346M414 664H426" stroke="#e9f1fa" stroke-width="2"/>
+  <!-- funnel + feed into standpipe -->
+  <path d="M302 440L312 456H324L334 440" stroke="#e9f1fa" stroke-width="2"/>
+  <path d="M318 456V484H370V500" stroke="#e9f1fa" stroke-width="7"/>
+  <path id="fPour" d="M318 456V484H370V500" stroke="#0f3460" stroke-width="3"/>
   <!-- breaker 1" -->
-  <path id="brk" d="M364 508V630M357 638L364 630L371 638" stroke="#e9f1fa" stroke-width="3"/>
+  <path id="brk" d="M410 470V452H432V630M425 638L432 630L439 638" stroke="#e9f1fa" stroke-width="3"/>
 </g>
 <g id="bub"></g>
 
 <!-- feed pipes -->
 <g fill="none" stroke-linecap="butt">
-  <path d="M760 200H372V384M436 200V236" stroke="#e9f1fa" stroke-width="10"/>
-  <path d="M762 200H372V386M436 200V238" stroke="#0f3460" stroke-width="6"/>
-  <path id="fMain" d="M760 200H436" stroke="#6fd3ff" stroke-width="3" stroke-dasharray="8 8"/>
-  <path id="fBox" d="M436 200H372V384" stroke="#6fd3ff" stroke-width="3" stroke-dasharray="8 8"/>
-  <path id="fTank" d="M436 200V236" stroke="#6fd3ff" stroke-width="3" stroke-dasharray="8 8"/>
+  <path d="M760 200H372V384M444 200V236" stroke="#e9f1fa" stroke-width="10"/>
+  <path d="M762 200H372V386M444 200V238" stroke="#0f3460" stroke-width="6"/>
+  <path id="fMain" d="M760 200H444" stroke="#6fd3ff" stroke-width="3" stroke-dasharray="8 8"/>
+  <path id="fBox" d="M444 200H372V384" stroke="#6fd3ff" stroke-width="3" stroke-dasharray="8 8"/>
+  <path id="fTank" d="M444 200V236" stroke="#6fd3ff" stroke-width="3" stroke-dasharray="8 8"/>
   <path d="M404 192L416 208M416 192L404 208" stroke="#e9f1fa" stroke-width="2"/>
-  <path d="M446 214L426 226M426 214L446 226" stroke="#e9f1fa" stroke-width="2"/>
+  <path d="M454 214L434 226M434 214L454 226" stroke="#e9f1fa" stroke-width="2"/>
 </g>
-<line id="dropT" x1="436" y1="240" x2="436" y2="300" stroke="#6fd3ff" stroke-width="2.4" stroke-dasharray="4 10"/>
+<line id="dropT" x1="444" y1="240" x2="444" y2="300" stroke="#6fd3ff" stroke-width="2.4" stroke-dasharray="4 10"/>
 <line id="dropB" x1="372" y1="388" x2="372" y2="400" stroke="#6fd3ff" stroke-width="2.4"/>
 
 <!-- dosing box -->
@@ -150,7 +155,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
 <g id="labels" font-size="17" letter-spacing=".5">
   <line x1="1430" y1="504" x2="1520" y2="504" stroke="#ffb35c" stroke-width="1.2" stroke-dasharray="6 4"/>
   <line x1="1430" y1="630" x2="1520" y2="630" stroke="#ff8fa3" stroke-width="1.2" stroke-dasharray="6 4"/>
-  <text x="1490" y="496" font-size="14" fill="#ffb35c">kolano lewara</text>
+  <text x="1490" y="496" font-size="14" fill="#ffb35c">krawędź rury Ø200</text>
   <text x="1490" y="622" font-size="14" fill="#ff8fa3">wylot rurki Ø1″</text>
 
   <text x="300" y="96" font-size="14" fill-opacity=".85">właz Ø700</text>
@@ -166,9 +171,9 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
 
   <path d="M392 412L512 312" stroke="#e9f1fa" stroke-width="1" stroke-opacity=".6"/>
   <text x="518" y="310" fill="#ffb35c">ZBIORNIK DREWNIANY DAWKUJĄCY</text>
-  <path d="M434 470L512 382" stroke="#e9f1fa" stroke-width="1" stroke-opacity=".6"/>
-  <text x="518" y="380">ZASYFONOWANIE (LEWAR) Ø200</text>
-  <path d="M368 600L512 448" stroke="#e9f1fa" stroke-width="1" stroke-opacity=".6"/>
+  <path d="M422 500L512 382" stroke="#e9f1fa" stroke-width="1" stroke-opacity=".6"/>
+  <text x="518" y="380">DZWON LEWARA I RURA SPUSTOWA Ø200</text>
+  <path d="M434 560L512 448" stroke="#e9f1fa" stroke-width="1" stroke-opacity=".6"/>
   <text x="518" y="446" fill="#ff8fa3">RURKA PRZERYWAJĄCA DZIAŁANIE SYFONU Ø1″</text>
 
   <text x="1180" y="608" text-anchor="middle">ZBIORNIK WODY CZYSTEJ Ø800</text>
@@ -179,8 +184,8 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
 
   <text x="36" y="738" fill="#6fd3ff" font-size="15">DO SYFONU POD RZEKĄ</text>
   <path d="M120 770H40" stroke="#6fd3ff" stroke-width="1.6" marker-end="url(#arw)"/>
-  <text x="380" y="828" font-size="14" fill-opacity=".8">zamknięcie wodne (interpretacja)</text>
-  <text x="36" y="858" font-size="13" fill-opacity=".55">prowadzenie rur, lejek i zamknięcie wodne narysowane schematycznie</text>
+  <text x="420" y="828" font-size="14" fill-opacity=".8">zasyfonowanie Ø200 (zamknięcie wodne)</text>
+  <text x="36" y="858" font-size="13" fill-opacity=".55">prowadzenie rur pod dnem i lejek zbiornika dawkującego narysowane schematycznie</text>
 </g>
 </svg>
 </div>
@@ -223,7 +228,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
       <text x="56" y="18" font-size="13" fill="#6fd3ff" font-family="IBM Plex Sans,sans-serif">— poziom w komorze</text>
       <text x="220" y="18" font-size="13" fill="#ffb35c" font-family="IBM Plex Sans,sans-serif">- - odpływ do syfonu</text>
     </svg>
-    <p class="note">Oś czasu nie jest równomierna: napełnianie trwa godziny, płukanie minutę lub dwie, więc animacja przyspiesza je różnie. Przesuń dopływ do dawkownika w prawo: zbiornik dawkujący zacznie się przechylać, zanim lustro dojdzie do kolana, i porcje wody przelecą przez lewar bez skutku.</p>
+    <p class="note">Oś czasu nie jest równomierna: napełnianie trwa godziny, płukanie minutę lub dwie, więc animacja przyspiesza je różnie. Przesuń dopływ do dawkownika w prawo: zbiornik dawkujący zacznie się przechylać, zanim lustro dojdzie do krawędzi rury spustowej, i porcje wody przelecą bez skutku.</p>
   </section>
 </div>
 
@@ -233,7 +238,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
     <ul>
       <li><b>Zbiornik wody czystej Ø800</b>, długość 18,50 m (ok. 9,3 m³)</li>
       <li><b>Komora</b> głęboka 285 cm, w świetle 80 × 100 cm, właz Ø700</li>
-      <li><b>Zasyfonowanie płuczki Ø200</b> z odpływem „do syfonu”</li>
+      <li><b>Lewar dzwonowy</b>: dzwon nad rurą spustową, <b>zasyfonowanie płuczki Ø200</b> z odpływem „do syfonu”</li>
       <li><b>Rurka przerywająca działanie syfonu Ø1″</b></li>
       <li><b>Zbiornik drewniany dawkujący wodę</b></li>
       <li><b>Dwa osobne doprowadzenia wody czystej</b>: do zbiornika i do zbiornika dawkującego</li>
@@ -242,8 +247,8 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
   <div>
     <h2>Założenia modelu</h2>
     <ul>
-      <li>Zbiornik dawkujący jest przechylny, ma ok. 25 l i zrzuca wodę do długiego ramienia lewara</li>
-      <li>Kolano lewara 88 cm nad dnem, wylot rurki Ø1″ 25 cm nad dnem, wylot zamknięcia wodnego 55 cm pod dnem</li>
+      <li>Zbiornik dawkujący jest przechylny, ma ok. 25 l i zrzuca wodę do rury spustowej</li>
+      <li>Krawędź rury spustowej 88 cm nad dnem, dzwon do 108 cm, wylot rurki Ø1″ 25 cm nad dnem, wylot zamknięcia wodnego 55 cm pod dnem</li>
       <li>Odpływ liczony jako Q = μ·A·√(2gH) przy μ = 0,5; wynik to rząd wielkości, nie pomiar</li>
       <li>Wydatki obu dopływów są nieznane, suwaki pokazują ich wpływ</li>
     </ul>
@@ -280,11 +285,11 @@ $("q2").addEventListener("input",e=>$("q2o").textContent=e.target.value+" l/h");
 $("lb").addEventListener("change",e=>$("labels").setAttribute("visibility",e.target.checked?"visible":"hidden"));
 
 const T={
- fill:`<b>Napełnianie.</b> Woda czysta powoli wypełnia <i>zbiornik Ø800</i> i komorę. W krótkim ramieniu lewara poziom rośnie razem z lustrem, długie ramię jest suche, a na dole stoi zamknięcie wodne.`,
- wait:`<b>Zbiornik pełny, czeka.</b> Lustro doszło do kolana lewara i nadmiar tylko się przelewa, spływając strużką po ściance. Takie sączenie nie wypełni przekroju Ø200, więc lewar sam nie ruszy.`,
- early:`<b>Przechył za wcześnie.</b> Zbiornik dawkujący zrzucił porcję, ale lustro jest jeszcze poniżej kolana. Woda tylko przeleciała przez długie ramię do kanału i lewar nie ma czego zassać.`,
- flush:`<b>Płukanie.</b> Porcja ze zbiornika dawkującego wypełniła długie ramię całym przekrojem, a zamknięcie wodne nie wpuściło powietrza od dołu. Lewar zassał i <i>woda ze zbiornika spływa naraz do syfonu pod rzeką</i>.`,
- brk:`<b>Zerwanie.</b> Lustro opadło do wylotu <i>rurki Ø1″</i>. Powietrze wpada pod kolano, słup wody się rwie i przepływ ustaje. Woda poniżej tego poziomu zostaje w zbiorniku na następny cykl.`};
+ fill:`<b>Napełnianie.</b> Woda czysta powoli wypełnia <i>zbiornik Ø800</i> i komorę. Pod dzwonem lustro rośnie razem z tym w komorze, nad nim zostaje poduszka powietrza. Rura spustowa jest sucha, a na dole stoi zamknięcie wodne.`,
+ wait:`<b>Zbiornik pełny, czeka.</b> Lustro pod dzwonem doszło do krawędzi rury spustowej i nadmiar tylko się przelewa, spływając strużką po ściance. Taki przepływ nie wyniesie powietrza spod dzwonu, więc lewar sam nie ruszy.`,
+ early:`<b>Przechył za wcześnie.</b> Zbiornik dawkujący zrzucił porcję, ale lustro jest jeszcze poniżej krawędzi rury spustowej. Woda tylko przeleciała rurą do kanału, a dzwon nie ma czego zassać.`,
+ flush:`<b>Płukanie.</b> Porcja ze zbiornika dawkującego wpadła do rury spustowej, wypełniła ją całym przekrojem i porwała powietrze spod dzwonu. Zamknięcie wodne nie wpuściło go z powrotem od dołu. Dzwon zassał i <i>woda ze zbiornika spływa naraz do syfonu pod rzeką</i>.`,
+ brk:`<b>Zerwanie.</b> Lustro opadło do wylotu <i>rurki Ø1″</i>. Powietrze wpada rurką pod dzwon, słup wody się rwie i przepływ ustaje. Woda poniżej tego poziomu zostaje w zbiorniku na następny cykl.`};
 
 // chart grid
 (function(){const g=$("chGrid");for(let i=0;i<=4;i++){const y=30+i*42;const l=document.createElementNS(NS,"line");l.setAttribute("x1",50);l.setAttribute("x2",630);l.setAttribute("y1",y);l.setAttribute("y2",y);l.setAttribute("stroke","#e9f1fa");l.setAttribute("stroke-opacity",i==4?.5:.1);g.appendChild(l);}
@@ -292,7 +297,7 @@ const T={
  mk(44,202,"end","0");mk(44,34,"end","100 cm","#6fd3ff");mk(636,34,"end","100 l/s","#ffb35c");mk(630,216,"end","czas →");})();
 
 // bubbles
-const bubs=[];for(let i=0;i<6;i++){const c=document.createElementNS(NS,"circle");c.setAttribute("r","4");c.setAttribute("fill","none");c.setAttribute("stroke","#ff8fa3");c.setAttribute("stroke-width","1.6");c.setAttribute("cx","364");c.setAttribute("opacity","0");$("bub").appendChild(c);bubs.push({el:c,p:i/6});}
+const bubs=[];for(let i=0;i<6;i++){const c=document.createElementNS(NS,"circle");c.setAttribute("r","4");c.setAttribute("fill","none");c.setAttribute("stroke","#ff8fa3");c.setAttribute("stroke-width","1.6");c.setAttribute("cx","432");c.setAttribute("opacity","0");$("bub").appendChild(c);bubs.push({el:c,p:i/6});}
 
 function setSt(s){st=s;}
 let last=performance.now(),uiT=0;
@@ -329,8 +334,8 @@ function frame(now){
   const yt=Math.max(yl,520);
   $("wTk").setAttribute("y",yt);$("wTk").setAttribute("height",680-yt);
   $("wLineT").setAttribute("y1",yt);$("wLineT").setAttribute("y2",yt);
-  $("wShort").setAttribute("y2",Math.max(yl,484));
   const full=st==="flush"?1:st==="brk"?Math.max(0,1-brkT/2.2):0;
+  $("wBell").setAttribute("height",(198*full).toFixed(1));
   $("wFull").setAttribute("stroke-opacity",(.6*full).toFixed(2));
   $("wDash").setAttribute("stroke-opacity",(.8*full).toFixed(2));$("wDash").setAttribute("stroke-dashoffset",off.toFixed(1));
   const trick=st==="wait"||(bstate==="tip"&&st!=="flush");
@@ -342,10 +347,11 @@ function frame(now){
   $("box").setAttribute("transform",`rotate(${ang.toFixed(1)} 360 414)`);
   const bh=34*box/BOXV;$("boxW").setAttribute("y",430-bh);$("boxW").setAttribute("height",bh);
   $("pour").setAttribute("stroke-opacity",bstate==="tip"?.85:0);
+  $("fPour").setAttribute("stroke",bstate==="tip"?"#6fd3ff":"#0f3460");
   // breaker + bubbles
   const air=st==="brk"&&brkT<2.2;
   $("brk").setAttribute("stroke",air?"#ff8fa3":"#e9f1fa");
-  bubs.forEach(b=>{if(running&&air)b.p=(b.p+dtr*1.4)%1;b.el.setAttribute("cy",(630-b.p*122).toFixed(1));b.el.setAttribute("opacity",air?1:0);});
+  bubs.forEach(b=>{if(running&&air)b.p=(b.p+dtr*1.4)%1;b.el.setAttribute("cy",(630-b.p*170).toFixed(1));b.el.setAttribute("opacity",air?1:0);});
   // ui
   uiT+=dtr;
   if(uiT>0.12||!running){uiT=0;
