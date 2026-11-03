@@ -120,10 +120,6 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
   <!-- bell -->
   <path d="M340 664V472Q340 464 348 464H412Q420 464 420 472V664" stroke="#e9f1fa" stroke-width="4"/>
   <path d="M334 664H346M414 664H426" stroke="#e9f1fa" stroke-width="2"/>
-  <!-- funnel + feed into standpipe -->
-  <path d="M302 440L312 456H324L334 440" stroke="#e9f1fa" stroke-width="2"/>
-  <path d="M318 456V484H370V500" stroke="#e9f1fa" stroke-width="7"/>
-  <path id="fPour" d="M318 456V484H370V500" stroke="#0f3460" stroke-width="3"/>
   <!-- breaker 1" -->
   <path id="brk" d="M410 470V452H432V630M425 638L432 630L439 638" stroke="#e9f1fa" stroke-width="3"/>
 </g>
@@ -147,7 +143,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
   <path d="M332 396H388L382 432H338Z" fill="#0f3460" stroke="#ffb35c" stroke-width="2.4" stroke-linejoin="round"/>
   <rect id="boxW" x="339" y="430" width="42" height="0" fill="#6fd3ff" fill-opacity=".6"/>
 </g>
-<line id="pour" x1="334" y1="420" x2="318" y2="452" stroke="#6fd3ff" stroke-width="6" stroke-linecap="round" stroke-opacity="0"/>
+<line id="pour" x1="333" y1="438" x2="328" y2="600" stroke="#6fd3ff" stroke-width="6" stroke-linecap="round" stroke-opacity="0"/>
 <circle cx="360" cy="414" r="4" fill="#ffb35c"/>
 <line x1="360" y1="414" x2="360" y2="140" stroke="#e9f1fa" stroke-width="1" stroke-opacity=".35" stroke-dasharray="3 4"/>
 
@@ -185,7 +181,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
   <text x="36" y="738" fill="#6fd3ff" font-size="15">DO SYFONU POD RZEKĄ</text>
   <path d="M120 770H40" stroke="#6fd3ff" stroke-width="1.6" marker-end="url(#arw)"/>
   <text x="420" y="828" font-size="14" fill-opacity=".8">zasyfonowanie Ø200 (zamknięcie wodne)</text>
-  <text x="36" y="858" font-size="13" fill-opacity=".55">prowadzenie rur pod dnem i lejek zbiornika dawkującego narysowane schematycznie</text>
+  <text x="36" y="858" font-size="13" fill-opacity=".55">prowadzenie rur pod dnem narysowane schematycznie</text>
 </g>
 </svg>
 </div>
@@ -228,7 +224,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
       <text x="56" y="18" font-size="13" fill="#6fd3ff" font-family="IBM Plex Sans,sans-serif">— poziom w komorze</text>
       <text x="220" y="18" font-size="13" fill="#ffb35c" font-family="IBM Plex Sans,sans-serif">- - odpływ do syfonu</text>
     </svg>
-    <p class="note">Oś czasu nie jest równomierna: napełnianie trwa godziny, płukanie minutę lub dwie, więc animacja przyspiesza je różnie. Przesuń dopływ do dawkownika w prawo: zbiornik dawkujący zacznie się przechylać, zanim lustro dojdzie do krawędzi rury spustowej, i porcje wody przelecą bez skutku.</p>
+    <p class="note">Oś czasu nie jest równomierna: napełnianie trwa godziny, płukanie minutę lub dwie, więc animacja przyspiesza je różnie. Przesuń dopływ do dawkownika w prawo: zbiornik dawkujący zacznie się przechylać, zanim lustro dojdzie do krawędzi rury spustowej, i jego fale nie dosięgną krawędzi rury.</p>
   </section>
 </div>
 
@@ -247,7 +243,7 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
   <div>
     <h2>Założenia modelu</h2>
     <ul>
-      <li>Zbiornik dawkujący jest przechylny, ma ok. 25 l i zrzuca wodę do rury spustowej</li>
+      <li>Zbiornik dawkujący jest przechylny, ma ok. 25 l i zrzuca wodę do komory, wywołując falę ponad krawędź rury spustowej</li>
       <li>Krawędź rury spustowej 88 cm nad dnem, dzwon do 108 cm, wylot rurki Ø1″ 25 cm nad dnem, wylot zamknięcia wodnego 55 cm pod dnem</li>
       <li>Odpływ liczony jako Q = μ·A·√(2gH) przy μ = 0,5; wynik to rząd wielkości, nie pomiar</li>
       <li>Wydatki obu dopływów są nieznane, suwaki pokazują ich wpływ</li>
@@ -287,8 +283,8 @@ $("lb").addEventListener("change",e=>$("labels").setAttribute("visibility",e.tar
 const T={
  fill:`<b>Napełnianie.</b> Woda czysta powoli wypełnia <i>zbiornik Ø800</i> i komorę. Pod dzwonem lustro rośnie razem z tym w komorze, nad nim zostaje poduszka powietrza. Rura spustowa jest sucha, a na dole stoi zamknięcie wodne.`,
  wait:`<b>Zbiornik pełny, czeka.</b> Lustro pod dzwonem doszło do krawędzi rury spustowej i nadmiar tylko się przelewa, spływając strużką po ściance. Taki przepływ nie wyniesie powietrza spod dzwonu, więc lewar sam nie ruszy.`,
- early:`<b>Przechył za wcześnie.</b> Zbiornik dawkujący zrzucił porcję, ale lustro jest jeszcze poniżej krawędzi rury spustowej. Woda tylko przeleciała rurą do kanału, a dzwon nie ma czego zassać.`,
- flush:`<b>Płukanie.</b> Porcja ze zbiornika dawkującego wpadła do rury spustowej, wypełniła ją całym przekrojem i porwała powietrze spod dzwonu. Zamknięcie wodne nie wpuściło go z powrotem od dołu. Dzwon zassał i <i>woda ze zbiornika spływa naraz do syfonu pod rzeką</i>.`,
+ early:`<b>Przechył za wcześnie.</b> Zbiornik dawkujący zrzucił porcję do komory, ale lustro jest jeszcze za nisko. Fala podniosła je tylko na chwilę, woda nie sięgnęła krawędzi rury spustowej i dzwon nie ruszył.`,
+ flush:`<b>Płukanie.</b> Zbiornik dawkujący zrzucił porcję do komory. Lustro skoczyło na chwilę ponad krawędź rury spustowej, przelew wypełnił ją całym przekrojem i porwał powietrze spod dzwonu. Zamknięcie wodne nie wpuściło go z powrotem od dołu. Dzwon zassał i <i>woda ze zbiornika spływa naraz do syfonu pod rzeką</i>.`,
  brk:`<b>Zerwanie.</b> Lustro opadło do wylotu <i>rurki Ø1″</i>. Powietrze wpada rurką pod dzwon, słup wody się rwie i przepływ ustaje. Woda poniżej tego poziomu zostaje w zbiorniku na następny cykl.`};
 
 // chart grid
@@ -328,9 +324,10 @@ function frame(now){
     sampleT+=dtr;if(sampleT>0.04){sampleT=0;hist.push([h,Q*1000]);if(hist.length>HN)hist.shift();}
   }
   // ---- draw ----
-  const yl=yOf(h);
-  $("wCh").setAttribute("y",yl);$("wCh").setAttribute("height",680-yl);
-  $("wLine").setAttribute("y1",yl);$("wLine").setAttribute("y2",yl);
+  const surge=(bstate==="tip"||(bstate==="back"&&bt<0.4))?Math.sin(Math.min(1,(bstate==="tip"?bt:0.7+bt)/1.1)*Math.PI)*7:0;
+  const yl=yOf(h), ys=yl-2*surge;
+  $("wCh").setAttribute("y",ys);$("wCh").setAttribute("height",680-ys);
+  $("wLine").setAttribute("y1",ys);$("wLine").setAttribute("y2",ys);
   const yt=Math.max(yl,520);
   $("wTk").setAttribute("y",yt);$("wTk").setAttribute("height",680-yt);
   $("wLineT").setAttribute("y1",yt);$("wLineT").setAttribute("y2",yt);
@@ -346,8 +343,7 @@ function frame(now){
   $("dropB").setAttribute("stroke-opacity",bstate==="fill"?1:0);
   $("box").setAttribute("transform",`rotate(${ang.toFixed(1)} 360 414)`);
   const bh=34*box/BOXV;$("boxW").setAttribute("y",430-bh);$("boxW").setAttribute("height",bh);
-  $("pour").setAttribute("stroke-opacity",bstate==="tip"?.85:0);
-  $("fPour").setAttribute("stroke",bstate==="tip"?"#6fd3ff":"#0f3460");
+  $("pour").setAttribute("stroke-opacity",bstate==="tip"?.85:0);$("pour").setAttribute("y2",ys.toFixed(1));
   // breaker + bubbles
   const air=st==="brk"&&brkT<2.2;
   $("brk").setAttribute("stroke",air?"#ff8fa3":"#e9f1fa");

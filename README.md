@@ -8,7 +8,7 @@ Interaktywny schemat ideowy samoczynnej płuczki kanalizacyjnej przy syfonie pod
 
 1. Woda czysta powoli napełnia zbiornik Ø800 o długości 18,50 m oraz komorę.
 2. Pod dzwonem lewara zostaje poduszka powietrza. Gdy lustro dojdzie do krawędzi rury spustowej Ø200, nadmiar tylko się przelewa. Lewar sam nie ruszy.
-3. Osobno napełniany drewniany zbiornik dawkujący przechyla się i zrzuca porcję wody do rury spustowej, a ta porywa powietrze spod dzwonu. Dzwon zasysa, a woda ze zbiornika spływa naraz do syfonu pod rzeką i wymywa z niego osady.
+3. Osobno napełniany drewniany zbiornik dawkujący przechyla się i zrzuca porcję wody do komory. Lustro skacze na chwilę ponad krawędź rury spustowej, a przelew wypełnia ją całym przekrojem i porywa powietrze spod dzwonu. Dzwon zasysa, a woda ze zbiornika spływa naraz do syfonu pod rzeką i wymywa z niego osady.
 4. Gdy lustro opadnie do wylotu rurki przerywającej Ø1″, powietrze wpada pod dzwon i zrywa słup wody i cykl zaczyna się od nowa.
 
 ## Co jest z rysunku, a co jest założeniem
