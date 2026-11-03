@@ -53,6 +53,13 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
 .src ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-dim)}
 .src li{margin:2px 0}
 .src li b{font-weight:500;color:var(--ink)}
+.steps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:820px){.steps{grid-template-columns:minmax(0,1fr)}}
+.step{border-top:1.5px solid var(--ink-faint);padding-top:8px}
+.step h3{font-family:var(--display);font-weight:500;font-size:19px;letter-spacing:.04em;text-transform:uppercase;margin:0 0 4px}
+.step h3 span{color:var(--wood);margin-right:8px}
+.step p,.why p{margin:0;font-size:15px;color:var(--ink-dim)}
+.step p i,.why p i{font-style:normal;color:var(--ink)}
 .links a{color:var(--water)}
 .note{font-size:13px;color:var(--ink-dim);margin:0;max-width:90ch}
 </style>
@@ -227,6 +234,17 @@ dd{margin:0;font-family:var(--mono);font-size:14px;text-align:right}
     <p class="note">Oś czasu nie jest równomierna: napełnianie trwa godziny, płukanie minutę lub dwie, więc animacja przyspiesza je różnie. Przesuń dopływ do dawkownika w prawo: zbiornik dawkujący zacznie się przechylać, zanim lustro dojdzie do krawędzi rury spustowej, i jego fale nie dosięgną krawędzi rury.</p>
   </section>
 </div>
+
+<section class="panel">
+  <h2>Jak to działa</h2>
+  <div class="why"><p>Syfon pod rzeką Prudnik przy Dolnej Bramie to według arkusza Mairicha z 1894 r. <i>dwie rury, 400 mm i 175 mm, na odcinku 61 m</i>. Przy małym nocnym przepływie ścieki płyną w nich wolno i piasek osiada w najniższym punkcie. Płuczka co kilka godzin puszczała w syfon falę czystej wody i wymywała osady, bez pomp, prądu i obsługi.</p></div>
+  <div class="steps">
+    <div class="step"><h3><span>1</span>Napełnianie</h3><p>Woda z wodociągu powoli wypełnia <i>zbiornik Ø800 o długości 18,50 m</i> (ok. 9,3 m³) i komorę. Pod dzwonem zostaje poduszka powietrza. Nawet gdy lustro dojdzie do krawędzi rury spustowej, lewar sam nie ruszy, bo nadmiar tylko spływa strużką po ściance.</p></div>
+    <div class="step"><h3><span>2</span>Przechył zbiornika dawkującego</h3><p>Osobnym dopływem kapie woda do <i>drewnianego zbiornika dawkującego</i>. Gdy przeważy, przechyla się i zrzuca porcję do komory. Możesz to wywołać przyciskiem „Przechyl teraz”.</p></div>
+    <div class="step"><h3><span>3</span>Płukanie</h3><p>Fala podnosi lustro ponad krawędź rury spustowej. Przelew wypełnia rurę całym przekrojem i porywa powietrze spod dzwonu, a <i>zamknięcie wodne Ø200</i> nie wpuszcza go od dołu. Dzwon zasysa i ok. 7 m³ spływa do syfonu w półtorej do dwóch minut, z przepływem rzędu 60–80 l/s.</p></div>
+    <div class="step"><h3><span>4</span>Zerwanie</h3><p>Gdy lustro opadnie do wylotu <i>rurki przerywającej Ø1″</i>, powietrze wpada nią pod dzwon i słup wody się rwie. Przepływ ustaje, w zbiorniku zostaje reszta wody, a cykl zaczyna się od nowa.</p></div>
+  </div>
+</section>
 
 <div class="panel src">
   <div>
